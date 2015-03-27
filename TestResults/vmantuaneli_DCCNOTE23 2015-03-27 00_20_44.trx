@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="6b4652c6-0039-40a6-b8a0-b52fef597c64" name="vmantuaneli@DCCNOTE23 2015-03-27 00:20:44" runUser="DCC\vmantuaneli" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="a85036c8-a002-4a2a-9f1e-2f7d58a8346e">
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="vmantuaneli_DCCNOTE23 2015-03-27 00_20_44" />
+    <Properties />
+  </TestSettings>
+  <Times creation="2015-03-27T00:20:44.5154700-03:00" queuing="2015-03-27T00:20:44.8513337-03:00" start="2015-03-27T00:20:44.9243806-03:00" finish="2015-03-27T00:20:45.1905583-03:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="7" executed="7" passed="7" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="AtLeastOneSeletion" storage="tests/bin/debug/tests.dll" id="34c7d0af-ac24-f51d-d6d4-1591f7fd00bc">
+      <Execution id="4ea7b5c2-529c-47a7-9a3e-a0431811bfab" />
+      <TestMethod codeBase="C:/Users/vmantuaneli/Documents/Visual Studio 2013/Projects/Workflow/Practicum Test/Tests/bin/debug/Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Tests.AppTests, Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AtLeastOneSeletion" />
+    </UnitTest>
+    <UnitTest name="FollowingOrder" storage="tests/bin/debug/tests.dll" id="af7b0ccf-f13e-d830-4c5a-407a11bd5419">
+      <Execution id="57448cbe-5173-49c2-9e49-3f42e6f7d16c" />
+      <TestMethod codeBase="C:/Users/vmantuaneli/Documents/Visual Studio 2013/Projects/Workflow/Practicum Test/Tests/bin/debug/Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Tests.AppTests, Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FollowingOrder" />
+    </UnitTest>
+    <UnitTest name="MultipleCoffeeAtMorning" storage="tests/bin/debug/tests.dll" id="0121f75e-5156-a4af-0c42-0518d1a786c0">
+      <Execution id="d4a7c463-3117-4f8d-9236-5b4408c8296b" />
+      <TestMethod codeBase="C:/Users/vmantuaneli/Documents/Visual Studio 2013/Projects/Workflow/Practicum Test/Tests/bin/debug/Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Tests.AppTests, Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MultipleCoffeeAtMorning" />
+    </UnitTest>
+    <UnitTest name="MultiplePotatoesAtNight" storage="tests/bin/debug/tests.dll" id="b8337038-3606-bd51-0f73-3926c4f073f2">
+      <Execution id="b7d373d2-b25f-4163-bf93-d5e682f5cd09" />
+      <TestMethod codeBase="C:/Users/vmantuaneli/Documents/Visual Studio 2013/Projects/Workflow/Practicum Test/Tests/bin/debug/Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Tests.AppTests, Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MultiplePotatoesAtNight" />
+    </UnitTest>
+    <UnitTest name="NoDessertAtMorning" storage="tests/bin/debug/tests.dll" id="2127fd18-6074-dc90-12c5-b7f50e11be2c">
+      <Execution id="64dbf6a5-4010-4f4d-9b66-0b7b1f87cb2c" />
+      <TestMethod codeBase="C:/Users/vmantuaneli/Documents/Visual Studio 2013/Projects/Workflow/Practicum Test/Tests/bin/debug/Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Tests.AppTests, Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NoDessertAtMorning" />
+    </UnitTest>
+    <UnitTest name="NotCaseSensitive" storage="tests/bin/debug/tests.dll" id="e45d48e5-5e26-98ef-c132-2ac7bea7abc2">
+      <Execution id="03d212a7-b85f-4448-8b32-7c9b8f2090f5" />
+      <TestMethod codeBase="C:/Users/vmantuaneli/Documents/Visual Studio 2013/Projects/Workflow/Practicum Test/Tests/bin/debug/Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Tests.AppTests, Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NotCaseSensitive" />
+    </UnitTest>
+    <UnitTest name="ErrorOnlyAtFinal" storage="tests/bin/debug/tests.dll" id="6dd8f737-08a3-e930-667e-cbe14f437d79">
+      <Execution id="05fbad59-33a8-472f-bf92-acc21c8b1831" />
+      <TestMethod codeBase="C:/Users/vmantuaneli/Documents/Visual Studio 2013/Projects/Workflow/Practicum Test/Tests/bin/debug/Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Tests.AppTests, Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ErrorOnlyAtFinal" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="34c7d0af-ac24-f51d-d6d4-1591f7fd00bc" executionId="4ea7b5c2-529c-47a7-9a3e-a0431811bfab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6dd8f737-08a3-e930-667e-cbe14f437d79" executionId="05fbad59-33a8-472f-bf92-acc21c8b1831" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="af7b0ccf-f13e-d830-4c5a-407a11bd5419" executionId="57448cbe-5173-49c2-9e49-3f42e6f7d16c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0121f75e-5156-a4af-0c42-0518d1a786c0" executionId="d4a7c463-3117-4f8d-9236-5b4408c8296b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b8337038-3606-bd51-0f73-3926c4f073f2" executionId="b7d373d2-b25f-4163-bf93-d5e682f5cd09" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2127fd18-6074-dc90-12c5-b7f50e11be2c" executionId="64dbf6a5-4010-4f4d-9b66-0b7b1f87cb2c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e45d48e5-5e26-98ef-c132-2ac7bea7abc2" executionId="03d212a7-b85f-4448-8b32-7c9b8f2090f5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="4ea7b5c2-529c-47a7-9a3e-a0431811bfab" testId="34c7d0af-ac24-f51d-d6d4-1591f7fd00bc" testName="AtLeastOneSeletion" computerName="DCCNOTE23" duration="00:00:00.0173223" startTime="2015-03-27T00:20:44.9483969-03:00" endTime="2015-03-27T00:20:45.1335181-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4ea7b5c2-529c-47a7-9a3e-a0431811bfab">
+    </UnitTestResult>
+    <UnitTestResult executionId="05fbad59-33a8-472f-bf92-acc21c8b1831" testId="6dd8f737-08a3-e930-667e-cbe14f437d79" testName="ErrorOnlyAtFinal" computerName="DCCNOTE23" duration="00:00:00.0003505" startTime="2015-03-27T00:20:45.1345191-03:00" endTime="2015-03-27T00:20:45.1365217-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="05fbad59-33a8-472f-bf92-acc21c8b1831">
+    </UnitTestResult>
+    <UnitTestResult executionId="57448cbe-5173-49c2-9e49-3f42e6f7d16c" testId="af7b0ccf-f13e-d830-4c5a-407a11bd5419" testName="FollowingOrder" computerName="DCCNOTE23" duration="00:00:00.0001950" startTime="2015-03-27T00:20:45.1375219-03:00" endTime="2015-03-27T00:20:45.1405231-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="57448cbe-5173-49c2-9e49-3f42e6f7d16c">
+    </UnitTestResult>
+    <UnitTestResult executionId="d4a7c463-3117-4f8d-9236-5b4408c8296b" testId="0121f75e-5156-a4af-0c42-0518d1a786c0" testName="MultipleCoffeeAtMorning" computerName="DCCNOTE23" duration="00:00:00.0010172" startTime="2015-03-27T00:20:45.1415242-03:00" endTime="2015-03-27T00:20:45.1445277-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d4a7c463-3117-4f8d-9236-5b4408c8296b">
+    </UnitTestResult>
+    <UnitTestResult executionId="b7d373d2-b25f-4163-bf93-d5e682f5cd09" testId="b8337038-3606-bd51-0f73-3926c4f073f2" testName="MultiplePotatoesAtNight" computerName="DCCNOTE23" duration="00:00:00.0001946" startTime="2015-03-27T00:20:45.1465275-03:00" endTime="2015-03-27T00:20:45.1485288-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b7d373d2-b25f-4163-bf93-d5e682f5cd09">
+    </UnitTestResult>
+    <UnitTestResult executionId="64dbf6a5-4010-4f4d-9b66-0b7b1f87cb2c" testId="2127fd18-6074-dc90-12c5-b7f50e11be2c" testName="NoDessertAtMorning" computerName="DCCNOTE23" duration="00:00:00.0008305" startTime="2015-03-27T00:20:45.1505305-03:00" endTime="2015-03-27T00:20:45.1535310-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="64dbf6a5-4010-4f4d-9b66-0b7b1f87cb2c">
+    </UnitTestResult>
+    <UnitTestResult executionId="03d212a7-b85f-4448-8b32-7c9b8f2090f5" testId="e45d48e5-5e26-98ef-c132-2ac7bea7abc2" testName="NotCaseSensitive" computerName="DCCNOTE23" duration="00:00:00.0010200" startTime="2015-03-27T00:20:45.1555339-03:00" endTime="2015-03-27T00:20:45.1585347-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="03d212a7-b85f-4448-8b32-7c9b8f2090f5">
+    </UnitTestResult>
+  </Results>
+</TestRun>

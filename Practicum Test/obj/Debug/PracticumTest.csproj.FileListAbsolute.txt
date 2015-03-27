@@ -1,0 +1,6 @@
+C:\Users\vmantuaneli\Documents\Visual Studio 2013\Projects\Workflow\Practicum Test\Practicum Test\bin\Debug\PracticumTest.exe.config
+C:\Users\vmantuaneli\Documents\Visual Studio 2013\Projects\Workflow\Practicum Test\Practicum Test\bin\Debug\PracticumTest.exe
+C:\Users\vmantuaneli\Documents\Visual Studio 2013\Projects\Workflow\Practicum Test\Practicum Test\bin\Debug\PracticumTest.pdb
+C:\Users\vmantuaneli\Documents\Visual Studio 2013\Projects\Workflow\Practicum Test\Practicum Test\obj\Debug\PracticumTest.csprojResolveAssemblyReference.cache
+C:\Users\vmantuaneli\Documents\Visual Studio 2013\Projects\Workflow\Practicum Test\Practicum Test\obj\Debug\PracticumTest.exe
+C:\Users\vmantuaneli\Documents\Visual Studio 2013\Projects\Workflow\Practicum Test\Practicum Test\obj\Debug\PracticumTest.pdb
