@@ -58,9 +58,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\Dish.cs" />
+    <Compile Include="Domain\DishesViewModel.cs" />
+    <Compile Include="Domain\SelectedDish.cs" />
+    <Compile Include="Repository\DishRepository.cs" />
+    <Compile Include="Domain\Enums.cs" />
+    <Compile Include="Repository\PeriodRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domain\Selection.cs" />
+    <Compile Include="Repository\SelectionRepository.cs" />
+    <Compile Include="Seed\Seed.cs" />
+    <Compile Include="Util\Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -85,6 +93,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

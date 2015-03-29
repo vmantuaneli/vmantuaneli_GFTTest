@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PracticumTest.Domain;
 
 namespace PracticumTest
 {
     public class Selection
     {
-        public DishType? Type { get; set; }
+        public Period? Period { get; set; }
+        public DishType? DishType { get; set; }
         public bool Error { get; set; }
     }
 }

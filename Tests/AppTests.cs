@@ -1,19 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Diagnostics;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticumTest;
+using PracticumTest.Domain;
+using PracticumTest.Repository;
+using PracticumTest.Seed;
 
 namespace Tests
 {
     [TestClass]
     public class AppTests
     {
-        //Food in the following order: entrée, side, drink, dessert
-        //Period as "morning" and "night"
         [TestMethod]
-        public void FollowingOrder()
+        public void CheckReturnedOrderEntreeSideDrinkDessert()
         {
             Program.FeedData();
             string input, output;
@@ -25,12 +24,37 @@ namespace Tests
             input = "night, 2, 4, 3, 2, 1, 2";
             output = Program.ProcessData(input);
 
-            Assert.AreEqual(output, "steak, potato(x3), wine, cake");
+            Assert.AreEqual(output, "steak, potato (x3), wine, cake");
         }
 
-        //At least one selection of each dish type
         [TestMethod]
-        public void AtLeastOneSeletion()
+        public void InputPeriodAsMorningAndNightOnly()
+        {
+            Program.FeedData();
+            string input, output;
+            input = "morning, 1, 2, 3";
+            output = Program.ProcessData(input);
+
+            Assert.AreEqual(output, "eggs, toast, coffee");
+
+            input = "sthingelse, 1, 2, 3";
+            output = Program.ProcessData(input);
+
+            Assert.AreEqual(output, "error");
+
+            input = "night, 1, 2, 3, 4";
+            output = Program.ProcessData(input);
+
+            Assert.AreEqual(output, "steak, potato, wine, cake");
+
+            input = "foobar, 1, 2, 3, 4";
+            output = Program.ProcessData(input);
+
+            Assert.AreEqual(output, "error");
+        }
+
+        [TestMethod]
+        public void AtLeastOneSeletionOfEachDish()
         {
             Program.FeedData();
             string input, output;
@@ -45,16 +69,15 @@ namespace Tests
             Assert.AreEqual(output, "potato, cake, error");
         }
 
-        //Print error only at final
         [TestMethod]
-        public void ErrorOnlyAtFinal()
+        public void PrintErrorOnlyAtFinal()
         {
             Program.FeedData();
             string input, output;
             input = "morning, 3, 3, 2, 5, 1, 3";
             output = Program.ProcessData(input);
 
-            Assert.AreEqual(output, "eggs, toast, coffee(x3), error");
+            Assert.AreEqual(output, "eggs, toast, coffee (x3), error");
 
             input = "night, 1, 2, 7, 4, 3";
             output = Program.ProcessData(input);
@@ -62,16 +85,15 @@ namespace Tests
             Assert.AreEqual(output, "steak, potato, wine, cake, error");
         }
 
-        //Desserts are not allowed at morning
         [TestMethod]
-        public void NoDessertAtMorning()
+        public void DessertsAreNotAllowedAtMorning()
         {
             const string option = "4";
             const Period period = Period.Morning;
             const bool expectedBehavior = true;
 
             var error = false;
-            var type = Program.GetType(option, period, ref error);
+            var type = new DishRepository(period).GetDishType(option, ref error);
 
             Assert.AreEqual(error, expectedBehavior);
             Assert.AreEqual(type, null);
@@ -79,52 +101,72 @@ namespace Tests
 
         //Input is not case sensitive
         [TestMethod]
-        public void NotCaseSensitive()
+        public void InputIsNotCaseSensitive()
         {
-            var input1 = new List<string> {"morning", "1", "2", "3", "4"};
-            var error1 = false;
+            const string input1 = "morning, 1, 2, 3, 4";
 
-            var return1 = Program.GetPeriod(input1, ref error1);
+            var return1 = Program.ProcessData(input1);
 
-            var input2 = new List<string> { "morning", "1", "2", "3", "4" };
-            var error2 = false;
+            const string input2 = "Morning, 1, 2, 3, 4";
 
-            var return2 = Program.GetPeriod(input2, ref error2);
-
-            Assert.AreEqual(error1, error2);
+            var return2 = Program.ProcessData(input2);
             Assert.AreEqual(return1, return2);
         }
 
-        //Multiple coffees at morning
         [TestMethod]
-        public void MultipleCoffeeAtMorning()
+        public void MultipleCoffeeAreAllowedAtMorning()
         {
-            var dish = new Dish
-            {
-                Type = DishType.Drink
-            };
             const Period period = Period.Morning;
-            const bool expectedBehavior = true;
 
-            var isAllowed = Program.MultipleAllowed(dish, period);
+            var lstDishes = Seed.FeedData();
+            var multipleAllowed = lstDishes.FirstOrDefault(d => d.Period == period && d.MultipleAllowed);
 
-            Assert.AreEqual(isAllowed, expectedBehavior);
+            Debug.Assert(multipleAllowed != null, "multipleAllowed != null");
+            Assert.AreEqual(multipleAllowed.Description, "coffee");
         }
 
-        //Multiple potatoes at night
         [TestMethod]
-        public void MultiplePotatoesAtNight()
+        public void MultiplePotatoesAreAllowedAtNight()
         {
-            var dish = new Dish
-            {
-                Type = DishType.Side
-            };
             const Period period = Period.Night;
-            const bool expectedBehavior = true;
 
-            var isAllowed = Program.MultipleAllowed(dish, period);
+            var lstDishes = Seed.FeedData();
+            var multipleAllowed = lstDishes.FirstOrDefault(d => d.Period == period && d.MultipleAllowed);
 
-            Assert.AreEqual(isAllowed, expectedBehavior);
+            Debug.Assert(multipleAllowed != null, "multipleAllowed != null");
+            Assert.AreEqual(multipleAllowed.Description, "potato");
+        }
+
+        [TestMethod]
+        public void OnlyOneSelectionPerDishType()
+        {
+            Program.FeedData();
+            string input, output;
+            input = "morning, 1, 2, 3, 1";
+            output = Program.ProcessData(input);
+
+            Assert.AreEqual(output, "eggs, toast, coffee, error");
+
+            input = "night, 3, 4, 1, 3, 2";
+            output = Program.ProcessData(input);
+
+            Assert.AreEqual(output, "steak, potato, wine, cake, error");
+        }
+
+        [TestMethod]
+        public void AtLeastOneSelectionPerDishType()
+        {
+            Program.FeedData();
+            string input, output;
+            input = "morning, 3, 3, 2";
+            output = Program.ProcessData(input);
+
+            Assert.AreEqual(output, "toast, coffee (x2), error");
+
+            input = "night, 2, 1, 3, 2";
+            output = Program.ProcessData(input);
+
+            Assert.AreEqual(output, "steak, potato (x2), wine, error");
         }
     }
 }
